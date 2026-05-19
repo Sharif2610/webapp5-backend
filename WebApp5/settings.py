@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'WebApp5.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'django23',
         'USER' : 'root',
         'PASSWORD' : 'mysql1119',
