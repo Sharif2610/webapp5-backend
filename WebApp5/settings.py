@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # must be HERE
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -85,6 +85,7 @@ DATABASES = {
         'NAME': 'django23',
         'USER': 'root',
         'PASSWORD': 'mysql1119',
+        'HOST': 'localhost',   # or your DB host
         'PORT': '3306',
     }
 }
