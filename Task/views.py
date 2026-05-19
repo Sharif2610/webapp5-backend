@@ -10,8 +10,8 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.models import Token
 # Create your views here.
 @api_view(['GET','POST'])
-@permission_classes([IsAuthenticated])
-@authentication_classes([TokenAuthentication])
+#@permission_classes([IsAuthenticated])
+#@authentication_classes([TokenAuthentication])
 def task_list_create(request):
     if request.method == 'GET':
         task = Task.objects.all()
@@ -24,8 +24,8 @@ def task_list_create(request):
             return Response(serializer.data,status=HTTP_201_CREATED)
         return Response(serializer.errors,status=HTTP_400_BAD_REQUEST)
 @api_view(['GET','PUT','DELETE'])
-@permission_classes([IsAuthenticated])
-@authentication_classes([TokenAuthentication])
+#@permission_classes([IsAuthenticated])
+#@authentication_classes([TokenAuthentication])
 def update_tasks(request,id):
     task = get_object_or_404(Task,id=id)
     if request.method == 'GET':
